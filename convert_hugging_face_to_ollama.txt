@@ -19,4 +19,5 @@ python3 -c 'from huggingface_hub import hf_hub_download; downloaded_model_path =
 Step2:
 - create a modelfile for this model.
 - on the first line provide the path to where the model was downloaded `FROM <path to downloaded model>`
+- Check and modify the template. Can be very useful.
 - Run `ollama create <new-model-name> -f <modelfile_name>
