@@ -1,0 +1,22 @@
+# Run the following commands to convert any GGUF model downloaded from huggingface to Ollama model.
+
+
+Step1:
+- Activate a python environment where you have hugging face installed
+- Run the command below
+- provide the repo_id
+- provide the name of the model
+- print the model path for future reference.
+
+
+python3 -c 'from huggingface_hub import hf_hub_download; downloaded_model_path = hf_hub_download(
+                                                          repo_id="lmstudio-community/Llama3-ChatQA-1.5-8B-GGUF",
+                                                          filename="ChatQA-1.5-8B-Q8_0.gguf",
+                                                          use_auth_token=True
+                                                         ); print(downloaded_model_path)'
+
+
+Step2:
+- create a modelfile for this model.
+- on the first line provide the path to where the model was downloaded `FROM <path to downloaded model>`
+- Run `ollama create <new-model-name> -f <modelfile_name>
