@@ -21,3 +21,8 @@ Step2:
 - on the first line provide the path to where the model was downloaded `FROM <path to downloaded model>`
 - Check and modify the template. Can be very useful.
 - Run `ollama create <new-model-name> -f <modelfile_name>
+
+
+Note:
+- Small models are quick to load, and have faster inference
+- Large models (70B) take longer to load, and are also slower at inference.
